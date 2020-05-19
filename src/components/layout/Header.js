@@ -5,9 +5,11 @@ function Header(props) {
   return (
     <nav className="navbar navbar-dark navbar-expand-sm bg-danger mb-3 py-0">
       <div className="container">
-        <a href="/" className="navbar-brand">
+        <Link className="navbar-brand" to="/">
+          <i className="fas fa-plus"></i>
           {props.branding}
-        </a>
+        </Link>
+
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link className="nav-link" to="/">
@@ -34,7 +36,7 @@ function Header(props) {
 }
 
 Header.defaultProps = {
-  branding: "My App",
+  branding: "Contact Manager",
 };
 
 Header.propTypes = {
