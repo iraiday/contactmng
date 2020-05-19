@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
 import TestInputGroup from "../layout/textInputGroup";
-import uuid from "uuid";
 import axios from "axios";
 
 class EditContact extends Component {
@@ -30,13 +29,6 @@ class EditContact extends Component {
       return;
     }
 
-    const newContact = {
-      id: uuid(),
-      name,
-      email,
-      phone,
-      errors: {},
-    };
     const updateContact = {
       name,
       email,
